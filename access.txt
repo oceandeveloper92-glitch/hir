@@ -1,0 +1,44 @@
+HIR INTERNATIONAL ERP - ACCESS DETAILS
+=======================================
+
+--- APPLICATION LOGINS ---
+
+1. Kiran Maradia (Director/Master)
+   Email: kiran@hirinternational.com
+   Password: admin123
+
+2. Admin (Operation In Charge)
+   Email: kiranmaradia1978@gmail.com
+   Password: Admin@2025
+
+3. Shreya Tank (Visa Officer)
+   Email: VISA@HIRINTERNATIONAL.COM
+   Password: Visa@2025
+
+4. Yesha Chavada (Operation Manager)
+   Email: INQUIRY@HIRINTERNATIONAL.COM
+   Password: Pkg@2025
+
+5. Keval Rathod (Air Ticket)
+   Email: hirairticket@gmail.com
+   Password: Keval@1407
+
+6. Vivek Chandrasala (Junior)
+   Email: Contact@endsecure.in
+   Password: 123456
+
+--- DATABASE ACCESS (.env) ---
+
+Host: localhost
+Name: hir_international
+User: hir_user
+Password: tvpjV%)DwDcA
+
+--- SERVER DETAILS ---
+
+Live URL: https://erp.hirinternational.com
+Backend Port: 3005
+
+--- SSH PUBLIC KEY ---
+
+ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAACAQDi3xu2LEO2HIxVYifze3uCIp4qv2gQ98k1LofVgW8boLwRvjsPehnu8GI7YuewzQJ0fE0ggy4v+cRUGqraScqGc/gaenSwpNXZdNT4YKfEIEt8aJNdi9nO+x2S7OdZHGMr7xCB+T5nOgZLVBJANA5JaZetRxlSDbPn5FJUyej5XCc7Oykoa4xsFaLMP0PyDaIyQUNNOSnXr7CSIwegRe008T7JBsL7SlaI7UXXvvz2m2avFDSsrJg1+cY2lcRg7vnjg61GiHq2KzozJ1bqlOETTdDAhohNYPaUSMRtjxGm0SfG6mcRRUMLQCIG2XV2nLPJKSZv93wzjKhu8fRzk/hJ/f2olS/ad9dPmvnA8qJfsLhGQXnssYJzYN4oz15s0atQEIR95nMInL4zF1oBfjWR9gxHNwylSdqCZRglcVQ5kmuoJZ5gkdyQsxepPmNfXBP9B8nKhjvMa1HsO5Krpx9pidQzv7RSRk25GZUHQdGOSwpW6oCri4qYxFtcMu1mX2CZU26q0WisSP4kUBr15x2yFoOa6ct4NauEgFV1YNCBVEdFSDaXe8mPneSfWZ7/tjEjBM8plfjkCQ0iunHn1kx2YRcvQ0EEZPIn/cyG9rxIPg7Nx9FVs1grXkRrCyiNG9Jh0ScBdZV07XPdY62IOLaVCz8ac3HsdnS6izaOividRQ== ocean@DESKTOP-99Q36RF
