@@ -1,0 +1,49 @@
+{
+  "name": "backend",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app.js",
+    "dev": "nodemon app.js",
+    "migrate": "flyway migrate -configFiles=flyway.conf",
+    "migrate:info": "flyway info -configFiles=flyway.conf",
+    "migrate:validate": "flyway validate -configFiles=flyway.conf",
+    "migrate:clean": "flyway clean -configFiles=flyway.conf",
+    "migrate:baseline": "flyway baseline -configFiles=flyway.conf"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "dependencies": {
+    "axios": "^1.10.0",
+    "bcryptjs": "^3.0.2",
+    "cheerio": "^1.1.2",
+    "cors": "^2.8.5",
+    "dayjs": "^1.11.13",
+    "days": "^1.1.1",
+    "dotenv": "^16.5.0",
+    "express": "^5.1.0",
+    "express-handlebars": "^8.0.2",
+    "html-to-pdfmake": "^2.5.28",
+    "html-to-text": "^9.0.5",
+    "jsdom": "^26.1.0",
+    "jsonwebtoken": "^9.0.2",
+    "moment": "^2.30.1",
+    "multer": "^2.0.1",
+    "mysql2": "^3.14.1",
+    "node-cron": "^4.1.0",
+    "nodemailer": "^7.0.3",
+    "nodemailer-express-handlebars": "^7.0.0",
+    "pdf-lib": "^1.17.1",
+    "pdfmake": "^0.2.20",
+    "sequelize": "^6.37.7"
+  },
+  "devDependencies": {
+    "@types/cors": "^2.8.19",
+    "@types/express": "^5.0.3",
+    "nodemon": "^3.1.0"
+  }
+}

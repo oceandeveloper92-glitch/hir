@@ -1,0 +1,382 @@
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body
+  style="margin: 0; padding: 0; background-color: #f8faff; font-family: 'Poppins', Arial, sans-serif !important; color: #333; font-size: 13px !important;">
+  <div style="font-family: 'Poppins', Arial, sans-serif !important; font-size: 13px !important;">
+    <div
+      style="max-width: 500px; margin: 0 auto; background-color: #fff; border-radius: 12px; box-shadow: 0 2px 12px rgba(0, 0, 0, 0.05); border: 1px solid #e0e7ff; overflow: hidden; font-size: 13px !important;">
+      <!-- Header -->
+      <div
+        style="background-color: #2563eb; color: white; text-align: center; padding: 30px 20px; border-bottom: 3px solid #1e40af; display: block;">
+        <img src="https://erp.hirinternational.com/assets/hir-logo-DivPsUXd.png" alt="{{companyName}} Logo"
+          style="width: 100px; height: auto; border-radius: 12px; background-color: white; padding: 8px; box-shadow: 0 0 8px rgba(0, 0, 0, 0.1); object-fit: contain; display: block; margin: 0 auto 10px auto;" />
+        <h1
+          style="margin: 0 0 8px 0; font-size: 20px !important; font-weight: bold; font-family: 'Poppins', Arial, sans-serif; line-height: 1.2; color: #ffffff;">
+          Hir International</h1>
+        <p style="margin: 0 0 4px 0; font-size: 13px !important; color: #dbeafe; font-style: italic;">Your journey
+          begins here</p>
+        <p style="margin: 0; font-size: 13px !important; color: #dbeafe; font-style: italic;">Let's plan it together</p>
+      </div>
+
+
+      <!-- Body Content -->
+      <div style="font-size: 13px !important; font-family: 'Poppins', Arial, sans-serif !important;">
+        <center>
+          <h1 style="font-family: 'Poppins', Arial, sans-serif !important; font-size: 18px !important; margin: 20px 0;">
+            Enquiry Summary</h1>
+        </center>
+        {{#if revisionNotesShow}}
+        <div
+          style="margin-bottom: 24px; background-color: #f9fbff; box-shadow: 0 2px 6px rgba(235, 110, 37, 0.1); font-size: 13px !important;">
+          <h3
+            style="margin: 0; font-size: 15px !important; padding: 14px 20px; background-color: #e0e7ff; color: #eb7425; border-bottom: 1px solid #dbeafe; font-weight: 600; text-align: center;">
+            📝 Enquiry Revision</h3>
+          <table style="width: 100%; border-collapse: collapse; font-size: 13px !important;">
+            <tr>
+              <th
+                style="text-align: center; padding: 8px 12px; font-size: 13px !important; border-bottom: 1px solid #edf2f7; background-color: #f1f5ff; color: #1f2937; font-weight: 600; width: 25%;">
+                Remarks</th>
+              <td
+                style="text-align: left; padding: 8px 12px; font-size: 13px !important; border-bottom: 1px solid #edf2f7;">
+                {{{revisionNotes}}}</td>
+            </tr>
+          </table>
+        </div>
+        {{/if}}
+        </center>
+        <!-- Traveler Details -->
+        <div
+          style="margin-bottom: 24px; background-color: #f9fbff; box-shadow: 0 2px 6px rgba(37, 99, 235, 0.1); font-size: 13px !important;">
+          <h3
+            style="margin: 0; font-size: 15px !important; padding: 14px 20px; background-color: #e0e7ff; color: #2563eb; border-bottom: 1px solid #dbeafe; font-weight: 600; text-align: center;">
+            🧾 Traveler Details</h3>
+          <table style="width: 100%; border-collapse: collapse; font-size: 13px !important;">
+            <tr>
+              <th
+                style="text-align: center; padding: 8px 12px; font-size: 13px !important; border-bottom: 1px solid #edf2f7; background-color: #f1f5ff; color: #1f2937; font-weight: 600; width: 25%;">
+                Enquiry Number</th>
+              <td
+                style="text-align: left; padding: 8px 12px; font-size: 13px !important; border-bottom: 1px solid #edf2f7;">
+                {{EnquiryNo}}</td>
+            </tr>
+            <tr>
+              <th
+                style="text-align: center; padding: 8px 12px; font-size: 13px !important; border-bottom: 1px solid #edf2f7; background-color: #f1f5ff; color: #1f2937; font-weight: 600; width: 25%;">
+                Tour Type</th>
+              <td
+                style="text-align: left; padding: 8px 12px; font-size: 13px !important; border-bottom: 1px solid #edf2f7;">
+                {{tourType}}</td>
+            </tr>
+          </table>
+        </div>
+
+        <!-- Destination Details -->
+        <div
+          style="margin-bottom: 24px; background-color: #f9fbff; box-shadow: 0 2px 6px rgba(37, 99, 235, 0.1); font-size: 13px !important;">
+          <h3
+            style="margin: 0; font-size: 15px !important; padding: 14px 20px; background-color: #e0e7ff; color: #2563eb; border-bottom: 1px solid #dbeafe; font-weight: 600; text-align: center;">
+            🗺️ Destination Details</h3>
+          <table style="width: 100%; border-collapse: collapse; font-size: 13px !important;">
+            <tr>
+              <th
+                style="text-align: center; padding: 8px 12px; font-size: 13px !important; border-bottom: 1px solid #edf2f7; background-color: #f1f5ff; color: #1f2937; font-weight: 600; width: 25%;">
+                Destination</th>
+              <td
+                style="text-align: left; padding: 8px 12px; font-size: 13px !important; border-bottom: 1px solid #edf2f7;">
+                {{country}}, {{state}}, {{city}}</td>
+            </tr>
+            <tr>
+              <th
+                style="text-align: center; padding: 8px 12px; font-size: 13px !important; border-bottom: 1px solid #edf2f7; background-color: #f1f5ff; color: #1f2937; font-weight: 600; width: 25%;">
+                Pickup Date</th>
+              <td
+                style="text-align: left; padding: 8px 12px; font-size: 13px !important; border-bottom: 1px solid #edf2f7;">
+                {{pickupDate}}</td>
+            </tr>
+            <tr>
+              <th
+                style="text-align: center; padding: 8px 12px; font-size: 13px !important; border-bottom: 1px solid #edf2f7; background-color: #f1f5ff; color: #1f2937; font-weight: 600; width: 25%;">
+                Drop Date</th>
+              <td
+                style="text-align: left; padding: 8px 12px; font-size: 13px !important; border-bottom: 1px solid #edf2f7;">
+                {{dropDate}}</td>
+            </tr>
+            <tr>
+              <th
+                style="text-align: center; padding: 8px 12px; font-size: 13px !important; border-bottom: 1px solid #edf2f7; background-color: #f1f5ff; color: #1f2937; font-weight: 600; width: 25%;">
+                Pickup Location</th>
+              <td
+                style="text-align: left; padding: 8px 12px; font-size: 13px !important; border-bottom: 1px solid #edf2f7;">
+                {{pickupLocation}}</td>
+            </tr>
+            <tr>
+              <th
+                style="text-align: center; padding: 8px 12px; font-size: 13px !important; border-bottom: 1px solid #edf2f7; background-color: #f1f5ff; color: #1f2937; font-weight: 600; width: 25%;">
+                Drop Location</th>
+              <td
+                style="text-align: left; padding: 8px 12px; font-size: 13px !important; border-bottom: 1px solid #edf2f7;">
+                {{dropLocation}}</td>
+            </tr>
+            <tr>
+              <th
+                style="text-align: center; padding: 8px 12px; font-size: 13px !important; border-bottom: 1px solid #edf2f7; background-color: #f1f5ff; color: #1f2937; font-weight: 600; width: 25%;">
+                Total Night</th>
+              <td
+                style="text-align: left; padding: 8px 12px; font-size: 13px !important; border-bottom: 1px solid #edf2f7;">
+                {{noOfNights}}</td>
+            </tr>
+          </table>
+        </div>
+
+        <!-- Passenger Details -->
+        <div
+          style="margin-bottom: 24px; background-color: #f9fbff; box-shadow: 0 2px 6px rgba(37, 99, 235, 0.1); font-size: 13px !important;">
+          <h3
+            style="margin: 0; font-size: 15px !important; padding: 14px 20px; background-color: #e0e7ff; color: #2563eb; border-bottom: 1px solid #dbeafe; font-weight: 600; text-align: center;">
+            👥 Passenger Details</h3>
+          <table style="width: 100%; border-collapse: collapse; font-size: 13px !important;">
+            <tr>
+              <th
+                style="text-align: center; padding: 8px 12px; font-size: 13px !important; border-bottom: 1px solid #edf2f7; background-color: #f1f5ff; color: #1f2937; font-weight: 600; width: 25%;">
+                Number of Rooms</th>
+              <td
+                style="text-align: left; padding: 8px 12px; font-size: 13px !important; border-bottom: 1px solid #edf2f7;">
+                {{noOfRooms}}</td>
+            </tr>
+            <tr>
+              <th
+                style="text-align: center; padding: 8px 12px; font-size: 13px !important; border-bottom: 1px solid #edf2f7; background-color: #f1f5ff; color: #1f2937; font-weight: 600; width: 25%;">
+                Adults</th>
+              <td
+                style="text-align: left; padding: 8px 12px; font-size: 13px !important; border-bottom: 1px solid #edf2f7;">
+                {{noOfAdults}}</td>
+            </tr>
+            <tr>
+              <th
+                style="text-align: center; padding: 8px 12px; font-size: 13px !important; border-bottom: 1px solid #edf2f7; background-color: #f1f5ff; color: #1f2937; font-weight: 600; width: 25%;">
+                Children (Under 5)</th>
+              <td
+                style="text-align: left; padding: 8px 12px; font-size: 13px !important; border-bottom: 1px solid #edf2f7;">
+                {{noOfChildsBelow5}}</td>
+            </tr>
+            <tr>
+              <th
+                style="text-align: center; padding: 8px 12px; font-size: 13px !important; border-bottom: 1px solid #edf2f7; background-color: #f1f5ff; color: #1f2937; font-weight: 600; width: 25%;">
+                Children (with extra bed)</th>
+              <td
+                style="text-align: left; padding: 8px 12px; font-size: 13px !important; border-bottom: 1px solid #edf2f7;">
+                {{noOfChildsWithExtraBed}}</td>
+            </tr>
+            <tr>
+              <th
+                style="text-align: center; padding: 8px 12px; font-size: 13px !important; border-bottom: 1px solid #edf2f7; background-color: #f1f5ff; color: #1f2937; font-weight: 600; width: 25%;">
+                Children (without extra bed)</th>
+              <td
+                style="text-align: left; padding: 8px 12px; font-size: 13px !important; border-bottom: 1px solid #edf2f7;">
+                {{noOfChildsWithoutExtraBed}}</td>
+            </tr>
+          </table>
+        </div>
+
+        <!-- Cities to Cover (Table Format) -->
+        {{#if hotelDetails.length}}
+        <div
+          style="margin-bottom: 24px; background-color: #f9fbff; box-shadow: 0 2px 6px rgba(37, 99, 235, 0.1); font-size: 13px !important;">
+          <h3
+            style="margin: 0; font-size: 15px !important; padding: 14px 20px; background-color: #e0e7ff; color: #2563eb; border-bottom: 1px solid #dbeafe; font-weight: 600; text-align: center;">
+            🌆 Cities to Cover</h3>
+          <table style="width: 100%; border-collapse: collapse; font-size: 13px !important;">
+            <tr>
+              <th
+                style="text-align: center; padding: 8px 12px; font-size: 13px !important; border-bottom: 1px solid #edf2f7; background-color: #f1f5ff; color: #1f2937; font-weight: 600; width: 20%;">
+                City</th>
+              <th
+                style="text-align: center; padding: 8px 12px; font-size: 13px !important; border-bottom: 1px solid #edf2f7; background-color: #f1f5ff; color: #1f2937; font-weight: 600; width: 25%;">
+                Hotel Category</th>
+              <th
+                style="text-align: center; padding: 8px 12px; font-size: 13px !important; border-bottom: 1px solid #edf2f7; background-color: #f1f5ff; color: #1f2937; font-weight: 600; width: 18%;">
+                Check-In</th>
+              <th
+                style="text-align: center; padding: 8px 12px; font-size: 13px !important; border-bottom: 1px solid #edf2f7; background-color: #f1f5ff; color: #1f2937; font-weight: 600; width: 18%;">
+                Check-Out</th>
+              <th
+                style="text-align: center; padding: 8px 12px; font-size: 13px !important; border-bottom: 1px solid #edf2f7; background-color: #f1f5ff; color: #1f2937; font-weight: 600; width: 10%;">
+                Nights</th>
+            </tr>
+            {{#each hotelDetails}}
+            <tr>
+              <td
+                style="text-align: center; padding: 8px 12px; font-size: 13px !important; border-bottom: 1px solid #edf2f7; word-break: break-word; white-space: normal;">
+                {{this.city}}</td>
+              <td
+                style="text-align: center; padding: 8px 12px; font-size: 13px !important; border-bottom: 1px solid #edf2f7; word-break: break-word; white-space: normal;">
+                {{this.hotelCategory}}</td>
+              <td
+                style="text-align: center; padding: 8px 12px; font-size: 13px !important; border-bottom: 1px solid #edf2f7; word-break: break-word; white-space: normal;">
+                {{this.checkIn}}</td>
+              <td
+                style="text-align: center; padding: 8px 12px; font-size: 13px !important; border-bottom: 1px solid #edf2f7; word-break: break-word; white-space: normal;">
+                {{this.checkOut}}</td>
+              <td
+                style="text-align: center; padding: 8px 12px; font-size: 13px !important; border-bottom: 1px solid #edf2f7; word-break: break-word; white-space: normal;">
+                {{this.nights}}</td>
+            </tr>
+            {{/each}}
+          </table>
+        </div>
+
+        {{else}}
+
+        {{/if}}
+
+        <!-- Other Details -->
+        <div
+          style="margin-bottom: 24px; background-color: #f9fbff; box-shadow: 0 2px 6px rgba(37, 99, 235, 0.1); font-size: 13px !important;">
+          <h3
+            style="margin: 0; font-size: 15px !important; padding: 14px 20px; background-color: #e0e7ff; color: #2563eb; border-bottom: 1px solid #dbeafe; font-weight: 600; text-align: center;">
+            📝 Other Details</h3>
+          <table style="width: 100%; border-collapse: collapse; font-size: 13px !important;">
+            <tr>
+              <th
+                style="text-align: center; padding: 8px 12px; font-size: 13px !important; border-bottom: 1px solid #edf2f7; background-color: #f1f5ff; color: #1f2937; font-weight: 600; width: 25%;">
+                Meal Plan
+              </th>
+              <td
+                style="text-align: left; padding: 8px 12px; font-size: 13px !important; border-bottom: 1px solid #edf2f7;">
+                {{mealPlan}}
+              </td>
+            </tr>
+            <tr>
+              <th
+                style="text-align: center; padding: 8px 12px; font-size: 13px !important; border-bottom: 1px solid #edf2f7; background-color: #f1f5ff; color: #1f2937; font-weight: 600; width: 25%;">
+                Vehicle Choice</th>
+              <td
+                style="text-align: left; padding: 8px 12px; font-size: 13px !important; border-bottom: 1px solid #edf2f7;">
+                {{vehicleChoice}}</td>
+            </tr>
+            <tr>
+              <th
+                style="text-align: center; padding: 8px 12px; font-size: 13px !important; border-bottom: 1px solid #edf2f7; background-color: #f1f5ff; color: #1f2937; font-weight: 600; width: 25%;">
+                Remarks</th>
+              <td
+                style="text-align: left; padding: 8px 12px; font-size: 13px !important; border-bottom: 1px solid #edf2f7;">
+                {{{remarks}}}</td>
+            </tr>
+            <tr>
+              <th
+                style="text-align: center; padding: 8px 12px; font-size: 13px !important; border-bottom: 1px solid #edf2f7; background-color: #f1f5ff; color: #1f2937; font-weight: 600; width: 25%;">
+                Inclusions</th>
+              <td
+                style="text-align: left; padding: 8px 12px; font-size: 13px !important; border-bottom: 1px solid #edf2f7;">
+                {{{inclusions}}}</td>
+            </tr>
+          </table>
+        </div>
+
+        {{#if sightScenes.length}}
+        <div
+          style="margin-bottom: 24px; background-color: #f9fbff; box-shadow: 0 2px 6px rgba(37, 99, 235, 0.1); font-size: 13px !important;">
+          <h3
+            style="margin: 0; font-size: 15px !important; padding: 14px 20px; background-color: #e0e7ff; color: #2563eb; border-bottom: 1px solid #dbeafe; font-weight: 600; text-align: center;">
+            🏞️ Sight Scene Details</h3>
+          <table style="width: 100%; border-collapse: collapse; font-size: 13px !important;">
+            <tr>
+              <th
+                style="text-align: center; padding: 8px 12px; font-size: 13px !important; border-bottom: 1px solid #edf2f7; background-color: #f1f5ff; color: #1f2937; font-weight: 600; width: 25%;">
+                Location</th>
+              <th
+                style="text-align: center; padding: 8px 12px; font-size: 13px !important; border-bottom: 1px solid #edf2f7; background-color: #f1f5ff; color: #1f2937; width: 60%; font-weight: 600;">
+                Site Scene</th>
+            </tr>
+            {{#each sightScenes}}
+            <tr>
+              <td
+                style="text-align: center; padding: 8px 12px; font-size: 13px !important; border-bottom: 1px solid #edf2f7;">
+                {{this.siteSceneName}}</td>
+              <td
+                style="text-align: left; padding: 8px 12px; font-size: 13px !important; border-bottom: 1px solid #edf2f7;">
+                {{#if this.selectedScenes.length}}
+                <ul
+                  style="margin: 0; padding-left: 18px; list-style-type: disc; font-family: 'Poppins', Arial, sans-serif !important;">
+                  {{#each this.selectedScenes}}
+                  <li style="margin-bottom: 4px; font-size: 13px !important;">{{this}}</li>
+                  {{/each}}
+                </ul>
+                {{else}}
+                <span style="color: #999; font-style: italic; font-size: 13px !important;">No scenes selected</span>
+                {{/if}}
+              </td>
+            </tr>
+            {{/each}}
+          </table>
+        </div>
+        {{/if}}
+
+      </div>
+
+      <!-- Footer -->
+      <div
+        style="text-align: center; background-color: #f1f5ff; padding: 16px; font-size: 12px !important; color: #6b7280; border-top: 1px solid #e5e7eb; margin-top: 30px; font-family: 'Poppins', Arial, sans-serif !important;">
+        <p
+          style="font-family: 'Poppins', Arial, sans-serif !important; font-size: 12px !important; margin: 0; padding: 0; color: #6b7280;">
+          Thanks for choosing <strong
+            style="font-family: 'Poppins', Arial, sans-serif !important; font-size: 12px !important;">Hir
+            International</strong>!
+        </p>
+        <p
+          style="font-family: 'Poppins', Arial, sans-serif !important; font-size: 12px !important; margin: 0; padding: 0; color: #6b7280;">
+          <a href="https://hirinternational.com"
+            style="color: #2563eb; text-decoration: none; font-size: 13px !important; font-family: 'Poppins', Arial, sans-serif !important;">Visit
+            Website</a> |
+          <a href="tel:99788 11180"
+            style="color: #2563eb; text-decoration: none; font-size: 13px !important; font-family: 'Poppins', Arial, sans-serif !important;">Call:
+            99788 11180</a>
+        </p>
+        <!-- Contact CTA -->
+        <div class="cta-section"
+          style="text-align: center; margin-top: 35px; font-size: 13px !important; font-family: 'Poppins', Arial, sans-serif !important; padding: 0;">
+          <a href="mailto:{{companyEmail}}" class="cta-button"
+            style="background-color: #2563eb; color: #ffffff !important; text-decoration: none; padding: 10px 22px; border-radius: 8px; font-size: 13px !important; display: inline-block; font-weight: bold; transition: background-color 0.3s ease; font-family: 'Poppins', Arial, sans-serif !important; margin: 0;">
+            📧 Contact Us Now
+          </a>
+        </div>
+        <div
+          style="margin: 15px 0; display: flex; justify-content: center; align-items: center; flex-wrap: wrap; gap: 10px; font-family: 'Poppins', Arial, sans-serif !important; font-size: 13px !important; padding: 0;">
+          <img src="https://hirinternational.com/wp-content/uploads/2023/12/usa.png"
+            alt="Hir International USA Certification"
+            style="width: 50px; object-fit: contain; margin: 0 6px; border-radius: 4px; font-family: 'Poppins', Arial, sans-serif !important; font-size: 13px !important; padding: 0;" />
+          <img src="https://hirinternational.com/wp-content/uploads/2023/12/iata1.png"
+            alt="Hir International IATA Certification"
+            style="width: 50px; object-fit: contain; margin: 0 6px; border-radius: 4px; font-family: 'Poppins', Arial, sans-serif !important; font-size: 13px !important; padding: 0;" />
+          <img src="https://hirinternational.com/wp-content/uploads/2023/12/newzealand.png"
+            alt="Hir International New Zealand Certification"
+            style="width: 50px; object-fit: contain; margin: 0 6px; border-radius: 4px; font-family: 'Poppins', Arial, sans-serif !important; font-size: 13px !important; padding: 0;" />
+          <img src="https://hirinternational.com/wp-content/uploads/2023/12/south-africa-fundi-specialist.png"
+            alt="Hir International South Africa Certification"
+            style="width: 50px; object-fit: contain; margin: 0 6px; border-radius: 4px; font-family: 'Poppins', Arial, sans-serif !important; font-size: 13px !important; padding: 0;" />
+          <img src="https://hirinternational.com/wp-content/uploads/2023/12/europe.png"
+            alt="Hir International Europe Certification"
+            style="width: 50px; object-fit: contain; margin: 0 6px; border-radius: 4px; font-family: 'Poppins', Arial, sans-serif !important; font-size: 13px !important; padding: 0;" />
+        </div>
+        <p
+          style="font-family: 'Poppins', Arial, sans-serif !important; font-size: 12px !important; margin: 0; padding: 0; color: #6b7280;">
+          © <span id="year"
+            style="font-family: 'Poppins', Arial, sans-serif !important; font-size: 12px !important;">2025</span> Hir
+          International — Rajkot, Gujarat, India
+        </p>
+      </div>
+
+    </div>
+  </div>
+  <!-- Ads Banner -->
+
+
+</body>
+
+</html>

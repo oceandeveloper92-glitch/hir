@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <style>
+    body,
+    table,
+    td,
+    p,
+
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    a {
+      font-family: 'Poppins', Arial, sans-serif !important;
+      font-size: 13px !important;
+      margin: 0;
+      padding: 0;
+      /* Make all text smaller */
+    }
+
+    body {
+      margin: 0;
+      padding: 0;
+      background-color: #f8faff;
+      font-family: Arial, sans-serif;
+      color: #333;
+      font-size: 13px !important;
+      /* Small text */
+    }
+
+
+
+
+    .email-container {
+      max-width: 500px;
+      background-color: #fff;
+      border-radius: 12px;
+      box-shadow: 0 2px 12px rgba(0, 0, 0, 0.05);
+      border: 1px solid #e0e7ff;
+      overflow: hidden;
+      font-size: 13px !important;
+      /* Small text */
+    }
+
+    .header {
+      background-color: #2563eb;
+      color: white;
+      text-align: center;
+      padding: 30px 20px;
+      border-bottom: 3px solid #1e40af;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 15px;
+      font-size: 14px !important;
+    }
+
+    .header img {
+      width: 100px;
+      height: auto;
+      border-radius: 12px;
+      background-color: white;
+      padding: 8px;
+      box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+      object-fit: contain;
+    }
+
+    .header h1 {
+      margin: 0;
+      font-size: 20px !important;
+      font-weight: bold;
+      font-family: Arial, sans-serif;
+      line-height: 1.2;
+      color: #ffffff;
+    }
+
+    .header p {
+      margin: 0;
+      font-size: 13px !important;
+      color: #dbeafe;
+      font-style: italic;
+    }
+
+    .content {
+
+      font-size: 13px !important;
+    }
+
+    .section {
+      margin-bottom: 24px;
+
+      background-color: #f9fbff;
+      box-shadow: 0 2px 6px rgba(37, 99, 235, 0.1);
+      font-size: 13px !important;
+    }
+
+    .section h3 {
+      margin: 0;
+      font-size: 15px !important;
+      padding: 14px 20px;
+      background-color: #e0e7ff;
+      color: #2563eb;
+      border-bottom: 1px solid #dbeafe;
+      font-weight: 600;
+      text-align: center;
+    }
+
+    .details-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 13px !important;
+    }
+
+    .details-table th,
+    .details-table td {
+      text-align: left;
+      padding: 8px 12px;
+      font-size: 13px !important;
+      border-bottom: 1px solid #edf2f7;
+    }
+
+    .details-table th {
+      background-color: #f1f5ff;
+      color: #1f2937;
+      width: 40%;
+      font-weight: 600;
+      font-size: 13px !important;
+    }
+
+    .cta-section {
+      text-align: center;
+      margin-top: 35px;
+      font-size: 13px !important;
+    }
+
+    .cta-button {
+      background-color: #2563eb;
+      color: #ffffff !important;
+      text-decoration: none;
+      padding: 10px 22px;
+      border-radius: 8px;
+      font-size: 13px !important;
+      display: inline-block;
+      font-weight: bold;
+      transition: background-color 0.3s ease;
+    }
+
+    .cta-button:hover {
+      background-color: #1e40af;
+    }
+
+    .timeline {
+      position: relative;
+      padding: 20px 25px;
+      margin: 0;
+      border-left: 3px solid #2563eb;
+    }
+
+    .timeline-step {
+      position: relative;
+      margin-bottom: 20px;
+      padding-left: 20px;
+    }
+
+    .timeline-dot {
+      position: absolute;
+      left: -9px;
+      top: 5px;
+      width: 12px;
+      height: 12px;
+      background-color: #2563eb;
+      border-radius: 50%;
+      border: 2px solid white;
+      box-shadow: 0 0 0 3px #bfdbfe;
+    }
+
+    .timeline-content {
+      font-size: 14px;
+      line-height: 1.5;
+    }
+
+    .timeline-status {
+      font-weight: 600;
+      color: #1e3a8a;
+    }
+
+    .timeline-date {
+      font-size: 13px;
+      color: #6b7280;
+    }
+
+    .timeline-remarks {
+      margin-top: 4px;
+      color: #374151;
+    }
+
+    .footer {
+      text-align: center;
+      background-color: #f1f5ff;
+      padding: 16px;
+      font-size: 12px !important;
+      color: #6b7280;
+      border-top: 1px solid #e5e7eb;
+      margin-top: 30px;
+    }
+
+    .footer a {
+      color: #2563eb;
+      text-decoration: none;
+      font-size: 13px !important;
+    }
+
+    .footer a:hover {
+      text-decoration: underline;
+    }
+
+    .footer img {
+      width: 50px;
+
+      object-fit: contain;
+      margin: 0 6px;
+      border-radius: 4px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="email-wrapper">
+    <div class="email-container">
+      <!-- Header -->
+      <div class="header" style="display: block; text-align: center;">
+        <img src="https://erp.hirinternational.com/assets/hir-logo-DivPsUXd.png" alt="{{companyName}} Logo" style="display: block; margin: 0 auto 10px auto;" />
+        <h1 style="margin: 0 0 8px 0;">Hir International</h1>
+        <p style="margin: 0 0 4px 0;">Your journey begins here</p>
+        <p style="margin: 0;">Let's plan it together</p>
+      </div>
+      <!-- Content -->
+      <div class="content">
+        <center>
+          <h1>Passport Summary</h1>
+        </center>
+        <div class="section">
+          <h3>📄 Passport Details</h3>
+          <table class="details-table">
+            <tr>
+              <th>Name</th>
+              <td>{{name}}</td>
+            </tr>
+            <tr>
+              <th>Type</th>
+              <td>{{type}}</td>
+            </tr>
+            <tr>
+              <th>Category</th>
+              <td>{{passportCategory}}</td>
+            </tr>
+            <tr>
+              <th>Country</th>
+              <td>{{country}}</td>
+            </tr>
+            <tr>
+              <th>Passport Number</th>
+              <td>{{passport_number}}</td>
+            </tr>
+            <tr>
+              <th>Date of Issue</th>
+              <td>{{issueDate}}</td>
+            </tr>
+            <tr>
+              <th>Date of Expiry</th>
+              <td>{{expiryDate}}</td>
+            </tr>
+            <tr>
+              <th>Status</th>
+              <td>{{status}}</td>
+            </tr>
+          </table>
+
+        </div>
+
+        {{#if renewProcess.length}}
+        <div class="section">
+          <h3>🔁 Process</h3>
+          <div class="timeline">
+            {{#each renewProcess}}
+            <div class="timeline-step">
+              <div class="timeline-dot"></div>
+              <div class="timeline-content">
+                <div class="timeline-status">{{this.status}}</div>
+                <div class="timeline-date">{{this.date}}</div>
+                <div class="timeline-remarks">{{this.description}}</div>
+              </div>
+            </div>
+            {{/each}}
+          </div>
+        </div>
+        {{/if}}
+      </div>
+
+      <!-- Footer -->
+      <div class="footer">
+        <p>Thanks for choosing <strong>Hir International</strong>!</p>
+        <p>
+          <a href="https://hirinternational.com">Visit Website</a> |
+          <a href="tel:9714500400">Call: 9714500400</a>
+        </p>
+        <div
+          style="margin: 15px 0; display: flex; justify-content: center; align-items: center; flex-wrap: wrap; gap: 10px;">
+          <img src="https://hirinternational.com/wp-content/uploads/2023/12/usa.png"
+            alt="Hir International USA Certification" />
+          <img src="https://hirinternational.com/wp-content/uploads/2023/12/iata1.png"
+            alt="Hir International IATA Certification" />
+          <img src="https://hirinternational.com/wp-content/uploads/2023/12/newzealand.png"
+            alt="Hir International New Zealand Certification" />
+          <img src="https://hirinternational.com/wp-content/uploads/2023/12/south-africa-fundi-specialist.png"
+            alt="Hir International South Africa Certification" />
+          <img src="https://hirinternational.com/wp-content/uploads/2023/12/europe.png"
+            alt="Hir International Europe Certification" />
+        </div>
+        <p>© <span id="year">2025</span> Hir International — Rajkot, Gujarat, India</p>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>

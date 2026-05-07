@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <style>
+    body,
+    table,
+    td,
+    p,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    a {
+      font-family: 'Poppins', Arial, sans-serif !important;
+      font-size: 13px !important;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      margin: 0;
+      padding: 0;
+      background-color: #f8faff;
+      color: #333;
+      font-size: 13px !important;
+    }
+
+    .email-container {
+      max-width: 500px;
+      background-color: #fff;
+      border-radius: 12px;
+      box-shadow: 0 2px 12px rgba(0, 0, 0, 0.05);
+      border: 1px solid #e0e7ff;
+      overflow: hidden;
+      margin: 0 auto;
+    }
+
+    .header {
+      background-color: #2563eb;
+      color: white;
+      text-align: center;
+      padding: 30px 20px;
+      border-bottom: 3px solid #1e40af;
+    }
+
+    .header img {
+      width: 100px;
+      background-color: white;
+      padding: 8px;
+      border-radius: 12px;
+    }
+
+    .header h1 {
+      font-size: 20px !important;
+      margin: 10px 0 5px;
+    }
+
+    .header p {
+      font-size: 13px !important;
+      color: #dbeafe;
+      margin: 3px 0;
+    }
+
+    .section {
+      margin-bottom: 24px;
+      background-color: #f9fbff;
+      box-shadow: 0 2px 6px rgba(37, 99, 235, 0.1);
+    }
+
+    .section h3 {
+      font-size: 15px !important;
+      padding: 14px 20px;
+      background-color: #e0e7ff;
+      color: #2563eb;
+      border-bottom: 1px solid #dbeafe;
+      text-align: center;
+    }
+
+    .details-table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+
+    .details-table th,
+    .details-table td {
+      text-align: left;
+      padding: 8px 12px;
+      border-bottom: 1px solid #edf2f7;
+    }
+
+    .details-table th {
+      background-color: #f1f5ff;
+      width: 40%;
+    }
+
+    .timeline {
+      position: relative;
+      padding: 20px 25px;
+      border-left: 3px solid #2563eb;
+    }
+
+    .timeline-step {
+      margin-bottom: 20px;
+      padding-left: 20px;
+      position: relative;
+    }
+
+    .timeline-dot {
+      position: absolute;
+      left: -9px;
+      top: 5px;
+      width: 12px;
+      height: 12px;
+      background-color: #2563eb;
+      border-radius: 50%;
+      border: 2px solid white;
+      box-shadow: 0 0 0 3px #bfdbfe;
+    }
+
+    .timeline-status {
+      font-weight: 600;
+      color: #1e3a8a;
+    }
+
+    .timeline-date {
+      font-size: 13px;
+      color: #6b7280;
+    }
+
+    .timeline-remarks {
+      margin-top: 4px;
+      color: #374151;
+    }
+
+    .footer {
+      text-align: center;
+      background-color: #f1f5ff;
+      padding: 16px;
+      font-size: 12px !important;
+      color: #6b7280;
+      border-top: 1px solid #e5e7eb;
+    }
+
+    .footer a {
+      color: #2563eb;
+      text-decoration: none;
+    }
+
+    .footer img {
+      width: 50px;
+      margin: 5px;
+      border-radius: 4px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="email-wrapper">
+    <div class="email-container">
+      <!-- Header -->
+      <div class="header">
+        <img src="https://erp.hirinternational.com/assets/hir-logo-DivPsUXd.png" alt="{{companyName}} Logo" />
+        <h1>Hir International</h1>
+        <p>Your journey begins here</p>
+        <p>Let's plan it together</p>
+      </div>
+
+      <!-- Content -->
+      <div class="content" style="padding: 20px;">
+        <center>
+          <h1 style="font-size: 18px; margin-bottom: 15px;">Visa Application Summary</h1>
+        </center>
+
+        <!-- Traveller Details -->
+        <div class="section">
+          <h3>👤 Traveller Details</h3>
+          <table class="details-table">
+            <tr>
+              <th>Name</th>
+              <td>{{fullName}}</td>
+            </tr>
+            <tr>
+              <th>Passport Number</th>
+              <td>{{passportNumber}}</td>
+            </tr>
+            <tr>
+              <th>Email</th>
+              <td>{{email}}</td>
+            </tr>
+            <tr>
+              <th>Phone</th>
+              <td>{{phone}}</td>
+            </tr>
+
+          </table>
+        </div>
+
+        <!-- Visa Details -->
+        <div class="section">
+          <h3>🛂 Visa Details</h3>
+          <table class="details-table">
+            <tr>
+              <th>Country</th>
+              <td>{{countryName}}</td>
+            </tr>
+            <tr>
+              <th>Visa Type</th>
+              <td>{{visaType}}</td>
+            </tr>
+            <tr>
+              <th>Category</th>
+              <td>{{category}}</td>
+            </tr>
+          </table>
+        </div>
+
+        {{!-- Applicants --}}
+        {{#if travelers.length}}
+        <div class="section">
+          <h3>🧍 Applicants</h3>
+          <table class="details-table" style="width:100%; border-collapse: collapse;">
+            <tr>
+              <th style="width:33%; text-align:left;">Name</th>
+              <th style="width:33%; text-align:left;">Passport Number</th>
+              <th style="width:33%; text-align:left;">Phone Number</th>
+            </tr>
+            {{#each travelers}}
+            <tr>
+              <td style="width:33%; padding:4px 8px;">{{this.name}}</td>
+              <td style="width:33%; padding:4px 8px;">{{this.passportNumber}}</td>
+              <td style="width:33%; padding:4px 8px;">{{this.phoneNumber}}</td>
+            </tr>
+            {{/each}}
+          </table>
+        </div>
+        {{/if}}
+
+        <!-- Charges -->
+        <div class="section">
+          <h3>💰 Charges ( Per Person )</h3>
+          <table class="details-table">
+            <tr>
+              <th>VFS Payment</th>
+              <td>{{vfsPayment}}</td>
+            </tr>
+            <tr>
+              <th>Visa Charges</th>
+              <td>{{visaFees}}</td>
+            </tr>
+            <tr>
+              <th>Service Charges</th>
+              <td>{{serviceCharge}}</td>
+            </tr>
+            {{#if courierCharge}}
+            <tr>
+              <th>Courier Charges</th>
+              <td>{{courierCharge}}</td>
+            </tr>
+            {{/if}}
+            {{#if isGst}}
+            <tr>
+              <th>GST (18%)</th>
+              <td>{{gst}}</td>
+            </tr>
+            {{/if}}
+            <tr>
+              <th><strong>Total</strong></th>
+              <td><strong>{{total}}</strong></td>
+            </tr>
+            <tr>
+              <th>Bill To</th>
+              <td>{{companyName}}</td>
+            </tr>
+          </table>
+        </div>
+
+        <!-- Remarks & Status -->
+        <div class="section">
+          <h3>📝 Remarks & Status</h3>
+          <table class="details-table">
+            <tr>
+              <th>Status</th>
+              <td>{{status}}</td>
+            </tr>
+            <tr>
+              <th>Remarks</th>
+              <td>{{remark}}</td>
+            </tr>
+          </table>
+        </div>
+
+        <!-- Timeline -->
+        {{#if timeLine.length}}
+        <div class="section">
+          <h3>📅 Timeline</h3>
+          <div class="timeline">
+            {{#each timeLine}}
+            <div class="timeline-step">
+              <div class="timeline-dot"></div>
+              <div class="timeline-content">
+                <div class="timeline-status">{{status}}</div>
+                <div class="timeline-date">{{date}}</div>
+                {{#if remark}}<div class="timeline-remarks">{{remark}}</div>{{/if}}
+                {{#if appointmentDate}}<div class="timeline-remarks">Appointment Date: {{appointmentDate}}</div>{{/if}}
+              </div>
+            </div>
+            {{/each}}
+          </div>
+        </div>
+        {{/if}}
+      </div>
+
+      <!-- Footer -->
+      <div class="footer">
+        <p>Thanks for choosing <strong>Hir International</strong>!</p>
+        <p>
+          <a href="https://hirinternational.com">Visit Website</a> |
+          <a href="tel:9726797257">Call: 9726797257</a>
+        </p>
+        <div style="margin: 15px 0;">
+          <img src="https://hirinternational.com/wp-content/uploads/2023/12/usa.png" alt="USA" />
+          <img src="https://hirinternational.com/wp-content/uploads/2023/12/iata1.png" alt="IATA" />
+          <img src="https://hirinternational.com/wp-content/uploads/2023/12/newzealand.png" alt="New Zealand" />
+          <img src="https://hirinternational.com/wp-content/uploads/2023/12/south-africa-fundi-specialist.png"
+            alt="South Africa" />
+          <img src="https://hirinternational.com/wp-content/uploads/2023/12/europe.png" alt="Europe" />
+        </div>
+        <p>© 2025 Hir International — Rajkot, Gujarat, India</p>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>

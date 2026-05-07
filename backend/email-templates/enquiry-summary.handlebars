@@ -1,0 +1,390 @@
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background-color: #f8faff;
+      font-family:
+        Arial, sans-serif;
+      color: #333;
+    }
+
+    .email-wrapper {
+      padding: 20px;
+    }
+
+    .email-container {
+      max-width: 700px;
+      margin: auto;
+      background-color: #fff;
+      border-radius: 12px;
+      box-shadow: 0 2px 12px rgba(0, 0, 0, 0.05);
+      border:
+        1px solid #e0e7ff;
+      overflow: hidden;
+    }
+
+    .header {
+      background-color:
+        #2563eb;
+      color: white;
+      text-align: center;
+      padding: 30px 20px;
+      border-bottom: 3px solid #1e40af;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 15px;
+    }
+
+    .header img {
+      width: 100px;
+      height:
+        auto;
+      border-radius: 12px;
+      background-color: white;
+      padding: 8px;
+      box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+      object-fit: contain;
+    }
+
+    .header h1 {
+      margin: 0;
+      font-size: 28px;
+      font-weight: bold;
+      font-family: Arial,
+        sans-serif;
+      line-height: 1.2;
+      color: #ffffff;
+    }
+
+    .header p {
+      margin: 0;
+      font-size: 16px;
+      color: #dbeafe;
+      font-style: italic;
+    }
+
+    .content {
+      padding:
+        25px 30px;
+    }
+
+    .section {
+      margin-bottom: 24px;
+      border: 1px solid #e5e7eb;
+      border-radius: 10px;
+      background-color: #f9fbff;
+      box-shadow: 0 2px 6px rgba(37, 99, 235, 0.1);
+    }
+
+    .section h3 {
+      margin: 0;
+      font-size: 18px;
+      padding: 14px 20px;
+      background-color: #e0e7ff;
+      color: #2563eb;
+      border-bottom: 1px solid #dbeafe;
+      border-radius: 10px 10px 0 0;
+      font-weight: 600;
+      text-align: center;
+    }
+
+    .details-table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+
+    .details-table th,
+    .details-table td {
+      text-align: left;
+      padding: 12px 20px;
+      font-size: 14px;
+      border-bottom: 1px solid #edf2f7;
+    }
+
+    .details-table th {
+      background-color: #f1f5ff;
+      color:
+        #1f2937;
+      width: 40%;
+      font-weight: 600;
+    }
+
+    .cta-section {
+      text-align:
+        center;
+      margin-top: 35px;
+    }
+
+    .cta-button {
+      background-color: #2563eb;
+      color: #ffffff;
+      text-decoration: none;
+      padding: 12px 28px;
+      border-radius:
+        8px;
+      font-size: 15px;
+      display: inline-block;
+      font-weight: bold;
+      transition: background-color 0.3s ease;
+    }
+
+    .cta-button:hover {
+      background-color: #1e40af;
+    }
+
+    .footer {
+      text-align: center;
+      background-color: #f1f5ff;
+      padding: 20px;
+      font-size: 13px;
+      color: #6b7280;
+      border-top: 1px solid #e5e7eb;
+      margin-top: 30px;
+    }
+
+    .footer a {
+      color:
+        #2563eb;
+      text-decoration: none;
+    }
+
+    .footer a:hover {
+      text-decoration:
+        underline;
+    }
+
+    /* Footer Images - Pattern Style */
+    .footer img {
+      width:
+        30px;
+      height: 30px;
+      object-fit: contain;
+      margin: 0 8px;
+      border-radius:
+        4px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="email-wrapper">
+    <div class="email-container">
+      <!-- Header -->
+      <div class="header">
+        <img src="https://erp.hirinternational.com/assets/hir-logo-DivPsUXd.png" alt="{{companyName}} Logo" />
+        <h1>Hir International</h1>
+        <p>Your journey begins here</p>
+        <p>Let's plan it together</p>
+      </div>
+
+      <!-- Body Content -->
+      <div class="content">
+        <!-- Traveler Details -->
+        <div class="section">
+          <h3>🧾 Traveler Details</h3>
+          <table class="details-table">
+            <tr>
+              <th>Enquiry Number</th>
+              <td>{{EnquiryNo}}</td>
+            </tr>
+            <tr>
+              <th>Tour Type</th>
+              <td>{{tourType}}</td>
+            </tr>
+            <tr>
+              <th>Client Name</th>
+              <td>{{clientName}}</td>
+            </tr>
+            <tr>
+              <th>Client Email</th>
+              <td>{{clientEmail}}</td>
+            </tr>
+            <tr>
+              <th>Phone</th>
+              <td>{{clientPhone}}</td>
+            </tr>
+          </table>
+        </div>
+
+        <!-- Destination Details -->
+        <div class="section">
+          <h3>🗺️ Destination Details</h3>
+          <table class="details-table">
+            <tr>
+              <th>Destination</th>
+              <td>{{destination}}</td>
+            </tr>
+            <tr>
+              <th>Pickup Date</th>
+              <td>{{pickupDate}}</td>
+            </tr>
+            <tr>
+              <th>Drop Date</th>
+              <td>{{dropDate}}</td>
+            </tr>
+            <tr>
+              <th>Pickup Location</th>
+              <td>{{pickupLocation}}</td>
+            </tr>
+            <tr>
+              <th>Drop Location</th>
+              <td>{{dropLocation}}</td>
+            </tr>
+            <tr>
+              <th>Total Night</th>
+              <td>{{totalNights}}</td>
+            </tr>
+          </table>
+        </div>
+
+        <!-- Passenger Details -->
+        <div class="section">
+          <h3>👥 Passenger Details</h3>
+          <table class="details-table">
+            <tr>
+              <th>Number of Rooms</th>
+              <td>{{numRooms}}</td>
+            </tr>
+            <tr>
+              <th>Adults</th>
+              <td>{{numAdults}}</td>
+            </tr>
+            <tr>
+              <th>Children (Under 5)</th>
+              <td>{{numChildrenUnder5}}</td>
+            </tr>
+            <tr>
+              <th>Children (6–10)</th>
+              <td>{{numChildren6to10}}</td>
+            </tr>
+            <tr>
+              <th>Children (10–13)</th>
+              <td>{{numChildren10to13}}</td>
+            </tr>
+          </table>
+        </div>
+
+        <!-- Cities to Cover (Table Format) -->
+        {{#if citiesToCover.length}}
+        <div class="section">
+          <h3>🌆 Cities to Cover</h3>
+          <div style="display: block; overflow-x: auto; width: 100%; white-space: nowrap;">
+            <table class="details-table" style="min-width: 700px; display: inline-block; white-space: nowrap;">
+              <tr>
+                <th>City</th>
+                <th>Hotel Category</th>
+                <th>Check-In</th>
+                <th>Check-Out</th>
+                <th>Nights</th>
+              </tr>
+              {{#each citiesToCover}}
+              <tr>
+                <td>{{this.city}}</td>
+                <td>{{this.hotelCategory}}</td>
+                <td>{{this.checkIn}}</td>
+                <td>{{this.checkOut}}</td>
+                <td>{{this.nights}}</td>
+              </tr>
+              {{/each}}
+            </table>
+          </div>
+        </div>
+        {{else}}
+        <div class="section">
+          <h3>🌆 Cities to Cover</h3>
+          <p>No cities selected for the tour.</p>
+        </div>
+        {{/if}}
+
+        <!-- Sight Scene Details -->
+        {{#if sightScenes.length}}
+        <div class="section">
+          <h3>🏞️ Sight Scene Details</h3>
+          <table class="details-table">
+            <tr>
+              <th>Site Scene</th>
+              <th>Selected Scenes</th>
+            </tr>
+            {{#each sightScenes}}
+            <tr>
+              <td>{{this.siteSceneName}}</td>
+              <td>
+                {{#if this.selectedScenes.length}}
+                <ul style="margin:0;padding-left:18px;">
+                  {{#each this.selectedScenes}}
+                  <li>{{this}}</li>
+                  {{/each}}
+                </ul>
+                {{else}}
+                <span style="color:#999;">No scenes selected</span>
+                {{/if}}
+              </td>
+            </tr>
+            {{/each}}
+          </table>
+        </div>
+        {{/if}}
+
+        <!-- Other Details -->
+        <div class="section">
+          <h3>📝 Other Details</h3>
+          <table class="details-table">
+            <tr>
+              <th>Meal Plan</th>
+              <td>{{mealPlan}}</td>
+            </tr>
+            <tr>
+
+              <th>Vehicle Choice</th>
+              <td>{{vehicleChoice}}</td>
+            </tr>
+            <tr>
+              <th>Remarks</th>
+              <td>{{remarks}}</td>
+            </tr>
+            <tr>
+              <th>Inclusions</th>
+              <td>{{inclusions}}</td>
+            </tr>
+          </table>
+        </div>
+
+        <!-- Contact CTA -->
+        <div class="cta-section">
+          <a href="mailto:{{companyEmail}}" class="cta-button">📧 Contact Us
+            Now</a>
+        </div>
+      </div>
+
+      <!-- Footer -->
+      <div class="footer">
+        <p>Thanks for choosing <strong>Hir International</strong>!</p>
+        <p>
+          <a href="https://hirinternational.com">Visit Website</a> |
+          <a href="tel:9123985741">Call: 9123985741</a>
+        </p>
+        <div
+          style="margin: 15px 0; display: flex; justify-content: center; align-items: center; flex-wrap: wrap; gap: 10px;">
+          <img src="https://hirinternational.com/wp-content/uploads/2023/12/usa.png"
+            alt="Hir International USA Certification" />
+          <img src="https://hirinternational.com/wp-content/uploads/2023/12/iata1.png"
+            alt="Hir International IATA Certification" />
+          <img src="https://hirinternational.com/wp-content/uploads/2023/12/newzealand.png"
+            alt="Hir International New Zealand Certification" />
+          <img src="https://hirinternational.com/wp-content/uploads/2023/12/south-africa-fundi-specialist.png"
+            alt="Hir International South Africa Certification" />
+          <img src="https://hirinternational.com/wp-content/uploads/2023/12/europe.png"
+            alt="Hir International Europe Certification" />
+        </div>
+        <p>© <span id="year">2025</span> Hir International — Rajkot, Gujarat, India</p>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>
