@@ -14,6 +14,7 @@ const CampaignModal = require("./compaignModal");
 const IncentiveSettingsModal = require("./incentiveSettingsModal");
 const IncentiveModal = require("./inventiveModal");
 const VisaTravellersModal = require("./visaTravellersModal");
+const LayoutSetting = require("./layoutSettingModel");
 
 TourEnquiry.belongsTo(Lead, {
   foreignKey: "leadId",
@@ -121,5 +122,6 @@ module.exports = {
   IncentiveSettingsModal,
   IncentiveModal,
   VisaTravellersModal,
+  LayoutSetting,
 };
 

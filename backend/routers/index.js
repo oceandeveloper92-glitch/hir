@@ -20,6 +20,7 @@ const dashboardRouter = require("./dashboardRouter");
 const incentiveSettingRouter = require('./incentiveSettingsRouter');
 const incentiveRouter = require('./incentiveRouter');
 const visaTravellersRouter = require('./visaTravellersRouter');
+const layoutSettingRouter = require('./layoutSettingRouter');
 
 
 router.use("/auth", authRouter);
@@ -43,6 +44,7 @@ router.use("/dashboard", dashboardRouter);
 router.use("/incentive-settings", incentiveSettingRouter);
 router.use("/incentive", incentiveRouter);
 router.use("/visa-travellers", visaTravellersRouter);
+router.use("/layout-settings", layoutSettingRouter);
 
 
 
